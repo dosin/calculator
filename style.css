@@ -1,0 +1,123 @@
+#calculator {
+	width: 190px;
+	height: 330px;
+	margin: 50px auto;
+	background: #ddd;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 1px 1px 0 #999;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	position: relative;
+}
+.calculator-screen {
+	height: 60px;
+	padding: 5px;
+	margin-bottom: 20px;
+	background: #fff;
+	text-align: left;
+	position: relative;
+}
+.calculator-expression,
+.calculator-outcome {
+	position: absolute;
+	right: 5px;
+}
+.calculator-expression {
+	top: 5px;
+}
+.calculator-outcome {
+	bottom: 5px;
+	font-size: 18px;
+}
+.calculator-operators,
+.calculator-numbers {
+	position: relative;
+}
+.calculator-operators:after,
+.calculator-numbers:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.calculator-operators {
+	z-index: 999;
+}
+.calculator-numbers {
+	margin-right: 50px;
+	z-index: 111;
+}
+.calculator-operators a,
+.calculator-numbers a {
+	float: left;
+	cursor: pointer;
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 0 10px 10px;
+	transition: all 0.3s;
+	box-shadow: 1px 1px 0 #999;
+}
+.calculator-operators a {
+	background: #ccc;
+}
+.calculator-numbers a {
+	background: #fff;
+}
+.calculator-operators a:hover,
+.calculator-numbers a:hover {
+	background: #999;
+	color: #fff;
+}
+.calculator-operators a:active,
+.calculator-numbers a:active {
+	background: #333;
+	color: #fff;
+}
+.calculator-operators a:first-child,
+.calculator-operators a:first-child,
+.calculator-numbers a:nth-child(3n-2) {
+	margin-left: 0;
+}
+.calculator-operators a:nth-last-child(3),
+.calculator-operators a:nth-last-child(2),
+.calculator-operators a:last-child {
+	position: absolute;
+	right: 0;
+}
+.calculator-operators a:nth-last-child(3) {
+	top: 50px;
+}
+.calculator-operators a:nth-last-child(2) {
+	top: 100px;
+}
+.calculator-operators a:last-child {
+	top: 150px;
+	height: 90px;
+	line-height: 90px;
+}
+.calculator-logger {
+	margin: 30px 0 0 0;
+	padding: 10px 0;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+.calculator-logger li {
+	text-align: left;
+	margin-bottom: 10px;
+	font-size: 10px;
+}
+.calculator-logger li:first-child {
+	position: relative;
+}
